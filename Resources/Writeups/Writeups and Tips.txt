@@ -1,0 +1,22 @@
+https://docs.google.com/spreadsheets/u/0/d/1mfj6InLiXaKvemRimH1wowP4UTe_HExemGajId_JRD8/htmlview   ----> 6000 Hackerone Reports
+
+
+https://drive.google.com/file/d/1UliC3DKplw_4ua5UqOM0544r7B23SENe/view ------->  600 Test Cases For Bug Bounty 
+
+
+https://bugboard.rsecloud.com/bugbounty_writeups   -----> Bug Bounty Writeups
+
+
+https://gowsundar.gitbook.io/book-of-bugbounty-tips/untitled-3 ---> Bounty Tips 
+
+
+https://bugboard.rsecloud.com/bugbounty_writeups -----> Bounty Tips 
+
+
+https://github.com/alexbieber/Bug_Bounty_writeups#denial-of-service-dos ---> Bug Bounty Writeups 
+
+
+https://www.bugbountyhunter.com/disclosed/ ---> Bug Bounty Writeups
+
+
+https://fork-glass-a4c.notion.site/H1-Report-Notes-Shreyas-Chavhan-Shared-c2c9e990d2474d288626da2604bd4498 ----> 10,000 Hackerone Reports 

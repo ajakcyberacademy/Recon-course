@@ -1,0 +1,207 @@
+
+GitHub Dorks for Recon Basic to advanced: 
+
+
+🧩 Filename-based Dorks
+
+filename:.env "DB_PASSWORD"
+filename:.git-credentials
+filename:.npmrc _auth
+filename:.bash_history
+filename:config "DB_PASSWORD"
+filename:settings.py SECRET_KEY
+filename:manifest.xml
+filename:travis.yml
+filename:vim_settings.xml
+filename:database
+filename:prod.exs NOT prod.secret.exs
+filename:prod.secret.exs
+filename:.dockercfg auth
+filename:WebServers.xml
+filename:sftp-config.json
+filename:sftp.json path:.vscode
+filename:secrets.yml password
+filename:.esmtprc password
+filename:passwd path:etc
+filename:dbeaver-data-sources.xml
+filename:configuration.php JConfig password
+filename:.sh_history
+filename:shadow path:etc
+filename:proftpdpasswd
+filename:.pgpass
+filename:idea14.key
+filename:hub oauth_token
+filename:.bash_profile aws
+filename:.env MAIL_HOST=smtp.gmail.com
+filename:credentials aws_access_key_id
+filename:id_rsa
+filename:id_dsa
+
+📁 Path-based Dorks
+
+path:/config filename:database.php
+path:/wp-config.php
+path:/src/secrets
+path:/settings
+path:/.ssh
+path:/.git
+path:**/.env
+path:sites databases password
+
+🗂 Extension-based Dorks
+
+extension:json "access_token"
+extension:env "secret"
+extension:xml "apikey"
+extension:yml "password"
+extension:sql mysql dump
+extension:pem private
+extension:ppk private
+extension:sql mysql dump password
+extension:json api.forecast.io
+extension:json mongolab.com
+extension:yaml mongolab.com
+[WFClient] Password= extension:ica
+extension:avastlic “support.avast.com”
+extension:json googleusercontent client_secret
+
+🧬 Language-based + Keyword Dorks
+
+"domain" language:PHP password
+"admin" language:Python "secret"
+language:python username
+language:php username
+language:sql username
+language:html password
+language:perl password
+language:shell username
+language:java api
+HOMEBREW_GITHUB_API_TOKEN language:shell
+shodan_api_key language:python
+HEROKU_API_KEY language:json
+HEROKU_API_KEY language:shell
+SF_USERNAME salesforce
+
+🏢 Organization or Repository Specific Dorks
+
+
+org:example "password":
+repo:vercel/next.js filename:config.js
+org:Target "bucket_name"
+org:Target "aws_access_key"
+org:Target "aws_secret_key"
+org:Target "S3_BUCKET"
+org:Target "S3_ACCESS_KEY_ID"
+org:Target "S3_SECRET_ACCESS_KEY"
+org:Target "S3_ENDPOINT"
+org:Target "AWS_ACCESS_KEY_ID"
+org:Target "list_aws_accounts"
+
+🔑 Advanced Keyword-Based Dork
+
+api_key
+access_token
+client_secret
+auth_token
+authorizationToken
+x-api-key
+secret
+SECRET_KEY
+secret_token
+credentials
+token
+secure
+
+Cloud Provider Secrets
+
+AWS_SECRET_ACCESS_KEY
+AWS_ACCESS_KEY_ID
+aws_access_key_id
+aws_secret_key
+aws_token
+GCP_SECRET
+gcloud_api_key
+firebase_url
+shodan_api_key
+
+Database Credentials
+
+DB_PASSWORD
+DATABASE_URL
+db_password
+db_pass
+MYSQL_PASSWORD
+POSTGRES_PASSWORD
+mongo_uri
+mongodb_password
+
+SSH & Private Keys
+
+BEGIN RSA PRIVATE KEY
+BEGIN OPENSSH PRIVATE KEY
+BEGIN PGP PRIVATE KEY BLOCK
+id_rsa
+private_key
+pem private
+key
+
+Service-Specific Tokens
+
+slack_token
+discord_token
+github_token
+gitlab_token
+twilio_auth_token
+mailgun
+stripe_secret
+SF_USERNAME
+
+
+👤 Usernames
+user:name
+org:name
+in:login
+in:name
+fullname:firstname lastname
+in:email
+
+
+
+📅 Dorks using Dates
+created:<2012–04–05
+created:>=2011–06–12
+created:2016–02–07 location:iceland
+created:2011–04–06..2013–01–14 <user> in:username
+----------------------------------------------
+🧪 Bonus Dorks
+
+"Company name" send_keys
+"Companyname" "Authorization_bearer:"
+admin password
+cpanel
+cpanel password
+userid
+api.credentials
+file=
+NPM
+cache.json
+package.json
+superadmin
+.env.development
+db.json
+private user
+passwd
+password
+dbpassword
+access_key
+secret_access_key
+bucket_password
+redis_password
+root_password
+users.json
+users_database.json
+*"target(.)com" FTP
+*"target(.)com" SMTP
+*"target(.)com" LDAP
+
+"domain" AND ("api_key" OR "secret" OR "password" OR "access_token" OR "client_secret" OR "private_key" OR "AWS_SECRET_ACCESS_KEY" OR "DB_PASSWORD" OR "slack_token" OR "github_token" OR "BEGIN RSA PRIVATE KEY")
