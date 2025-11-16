@@ -125,6 +125,8 @@ intitle:"index of /" intext:".env"
 
 "Leaked_contract" ext:docx intext:"@gmail.com" ----> Importatnt
 
+intitle: index of / aadhaar
+
 site:"*.nasa.gov" | "slack"
 site:domain.com "join.slack"
 site:domain.com "join.slack" ext:pdf
@@ -772,4 +774,5 @@ v3,v4,........
 📊GraphQL
 
 "API" inurl:doc "GraphQL" -site:github.com -site:gitlab.com
+
 inurl:doc "mutation" "GraphQL" -site:github.com -site:gitlab.com
